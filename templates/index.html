@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Store_Network | เว็บสวยๆ เอฟเฟกต์เลื่อน</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ฟอนต์ -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS ของเรา -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand prompt-bold" href="#">Store_Network</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="javascript:void(0)">หน้าแรก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">สินค้า</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">ติดต่อ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="{{ url_for('logout') }}"
+                >ออกจากระบบ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-5">
+      <section
+        class="fade-on-scroll py-5 text-center bg-dark rounded-3 mb-5 text-white"
+      >
+        <h1 class="mb-3 prompt-bold">ยินดีต้อนรับสู่ Store_Network</h1>
+        <p>บริการจำหน่ายสินค้าออนไลน์ พร้อมดีไซน์สวยงามและลูกเล่นเว็บ</p>
+      </section>
+
+      <section class="fade-on-scroll py-5 bg-light rounded-3 mb-5 text-center">
+        <h2 class="prompt-bold mb-4">สินค้าแนะนำ</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="{{ url_for('static', filename='images/product1.png') }}"
+                class="card-img-top"
+                alt="สินค้า 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">สินค้า 1</h5>
+                <p class="card-text">รายละเอียดสั้น ๆ ของสินค้า</p>
+                <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="{{ url_for('static', filename='images/product1.png') }}"
+                class="card-img-top"
+                alt="สินค้า 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">สินค้า 2</h5>
+                <p class="card-text">รายละเอียดสั้น ๆ ของสินค้า</p>
+                <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="fade-on-scroll py-5 bg-secondary text-white rounded-3 text-center"
+      >
+        <h2 class="prompt-bold mb-4">ติดต่อเรา</h2>
+        <p>
+          สอบถามข้อมูลเพิ่มเติม โทร 012-345-6789 หรืออีเมล
+          support@store-network.com
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-0">© 2025 Store_Network. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS ของเรา -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

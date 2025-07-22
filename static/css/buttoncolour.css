@@ -1,0 +1,31 @@
+.btn-org {
+  background-color: #f49b20; /* สีส้มแลมโบแท้ */
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-family: 'Prompt', sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(197, 194, 194, 0.2);
+}
+
+.btn-org:hover {
+  background-color: #e68400; /* สีส้มเข้มกว่า */
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+/* 8yhooooooooooooooo */
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}

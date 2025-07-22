@@ -1,0 +1,65 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+canvas#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 40vh;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  min-height: 100vh;
+  /* เปลี่ยนพื้นหลังเป็นภาพ background_main */
+  background: url('../images/background_main.jpg') no-repeat center center fixed;
+  background-size: cover;
+  /* ถ้าต้องการเพิ่มไล่สีทับ ให้ใช้ linear-gradient แบบนี้ */
+  background-blend-mode: overlay;
+  background-color: rgba(15, 32, 39, 0.7); /* กำหนดสีทับโปร่งๆ เพื่อให้ข้อความอ่านง่าย */
+}
+
+
+.prompt-bold {
+  font-weight: 700;
+}
+
+.fade-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-on-scroll.fade-out {
+  opacity: 0;
+  transform: translateY(50px);
+  pointer-events: none;
+}

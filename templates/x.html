@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>เข้าสู่ระบบ | Store_Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #0b0f1a, #050712 80%);
+      overflow: hidden;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.ibb.co/2s90ZfT/stars.png') repeat;
+      z-index: 0;
+      animation: moveStars 60s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 10000px; }
+    }
+
+    .login-container {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+      max-width: 400px;
+      width: 90%;
+      color: #fff;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .form-control {
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(0,255,255,0.2);
+      color: #fff;
+    }
+
+    .form-control::placeholder {
+      color: #aaa;
+    }
+
+    .btn-space {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      border: none;
+      width: 100%;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00f2fe;
+      transition: 0.3s ease;
+    }
+
+    .btn-space:hover {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      box-shadow: 0 0 20px #00f2fe;
+    }
+
+    .credit {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>🚀 Store_Network</h2>
+      <p class="text-center">เข้าสู่ระบบเพื่อ</p>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="alert alert-danger">{{ messages[0] }}</div>
+        {% endif %}
+      {% endwith %}
+
+      <form method="POST">
+        <div class="mb-3">
+          <label for="username">ชื่อผู้ใช้</label>
+          <input type="text" name="username" id="username" class="form-control" placeholder="admin" required />
+        </div>
+        <div class="mb-3">
+          <label for="password">รหัสผ่าน</label>
+          <input type="password" name="password" id="password" class="form-control" placeholder="1234" required />
+        </div>
+        <button type="submit" class="btn btn-space">เข้าสู่ระบบ</button>
+      </form>
+
+      <div class="credit">🌌 Admin / 1234 | Designed for Neo</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
