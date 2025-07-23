@@ -52,3 +52,17 @@ function checkFadeOnScroll() {
 window.addEventListener('scroll', checkFadeOnScroll);
 window.addEventListener('resize', checkFadeOnScroll);
 window.addEventListener('load', checkFadeOnScroll);
+
+window.addEventListener("scroll", () => {
+  const texts = document.querySelectorAll(".overlay-text");
+  const windowHeight = window.innerHeight;
+
+  texts.forEach((text) => {
+    const rect = text.parentElement.getBoundingClientRect();
+    if (rect.top < windowHeight / 2 && rect.bottom > 100) {
+      text.classList.remove("fade-out");
+    } else {
+      text.classList.add("fade-out");
+    }
+  });
+});
